@@ -14,6 +14,14 @@ import useMacbookStore from "../../Store/index.js";
 import {noChangeParts} from "../../Constants/index.js";
 import {Color} from "three";
 
+/**
+ * Renders the macbook GLTF model and applies store-driven color and video texture customizations.
+ *
+ * The component loads a transformed macbook GLB, maps a video texture to the screen surface,
+ * and applies the store color to all mesh materials except parts listed in `noChangeParts`.
+ * @param {object} props - Props forwarded to the root group element.
+ * @returns {JSX.Element} A React group containing the macbook meshes with applied color and screen texture.
+ */
 export default function MacbookModel(props) {
     const { color, texture } = useMacbookStore();
     const { nodes, materials, scene } = useGLTF('/models/macbook-transformed.glb')
