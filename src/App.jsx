@@ -8,7 +8,9 @@ import Performance from "./components/Performance.jsx"
 import Features from "./components/Features.jsx";
 import Highlights from "./components/Highlights.jsx";
 import Footer from "./components/Footer.jsx";
+import "./App.css"
 gsap.registerPlugin(ScrollTrigger);
+
 const App = () => {
     return (
       <main>
@@ -23,4 +25,4 @@ const App = () => {
       </main>
     )
 }
-export default App
+export default App;
