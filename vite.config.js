@@ -12,6 +12,11 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [react(),
     tailwindcss()],
+  build: {
+    // increase the limit (default is 500 KB)
+    chunkSizeWarningLimit: 2000, // set to 2 MB
+  },
+
   resolve: {
     alias: {
       src: path.resolve(__dirname, './src'),
